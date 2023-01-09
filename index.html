@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="float">WeddingSire</h1>
+    <div class="center-div">
+        <div class="content-div">
+            <!-- <img src="logo2.jpg" /> -->
+
+            <div>
+                <h5> Comming Soon</h5>
+                <p>Weddingsire Photography Specializes In Wedding Photography And Film Making </p>
+                <div class="flex">
+                    <input type="text" placeholder="Email Address">
+                    <button>Notify Me</button>
+                </div>
+            </div>
+            <div class="flex-row">
+
+                <p><i class="fa fa-phone" style="font-size:18px;"></i><a href="tel:8180806031">Contact Us</a></p>
+                <p> <i class="fa fa-instagram" style=" padding-right:5px; font-size:20px;"></i><a
+                        href="https://instagram.com/weddingsire?igshid=OGQ2MjdiOTE=">Instagram</a></p>
+                <p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:weddingsire@gamil.com">Eamil Us</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="clock-bg">
+        <div class="clock">
+            <div class="hour">
+                <div class="hr" id="hr"></div>
+            </div>
+            <div class="min">
+                <div class="mn" id="mn"></div>
+            </div>
+            <div class="sec">
+                <div class="sc" id="sc"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const deg = 6;
+        const hr = document.querySelector('#hr');
+        const mn = document.querySelector('#mn');
+        const sc = document.querySelector('#sc');
+
+        setInterval(() => {
+
+            let day = new Date();
+            let hh = day.getHours() * 30;
+            let mm = day.getMinutes() * deg;
+            let ss = day.getSeconds() * deg;
+
+            hr.style.transform = `rotateZ(${(hh) + (mm / 12)}deg)`;
+            mn.style.transform = `rotateZ(${mm}deg)`;
+            sc.style.transform = `rotateZ(${ss}deg)`;
+        })
+
+    </script>
+</body>
+
+</html>
