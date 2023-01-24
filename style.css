@@ -24,6 +24,8 @@ img {
 body {
     background: url('./pexels-daria-obymaha-1683989.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
     color: white;
     text-align: center;
 }
